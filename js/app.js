@@ -13,4 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     resultAuthor.textContent = `You typed ${event.target.value}.`
   });
 
+  const selectCategory = document.querySelector('#category');
+  selectCategory.addEventListener('change', (event) => {
+    const chosenCategory = document.querySelector('#selection-result')
+    chosenCategory.textContent = `You opted for ${event.target.value}.`
+  })
+
 })
