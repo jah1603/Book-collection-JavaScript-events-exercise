@@ -19,4 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     chosenCategory.textContent = `You opted for ${event.target.value}.`
   })
 
+  const formInput = document.querySelector('#form');
+  formInput.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formDetails = document.querySelector('#form-result')
+    formDetails.textContent = `You stored ${event.target.title.value}, a ${event.target.category.value} by ${event.target.author.value}`;
+  });
+
 })
