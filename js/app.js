@@ -25,6 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const formDetails = document.querySelector('#form-result')
     formDetails.textContent = `You stored ${event.target.title.value}, a ${event.target.category.value} by ${event.target.author.value}`;
+
+      const newListItem = document.createElement("li");
+      newListItem.textContent = `You stored ${event.target.title.value}, a ${event.target.category.value} by ${event.target.author.value}`;
+      newListItem.id = "new-id";
+      // const newListItem = document.createElement("li");
+      // newListItem.textContent = "Purple";
+      // newListItem.classList.add("purple");
+      //
+      // newListItem.id = "new-id"
+      //
+      const list = document.querySelector("ul");
+      list.appendChild(newListItem);
+
   });
 
 })
